@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+        <meta name="viewport" content="widht=device-width, initial-scale=1.0">
+        <title>Estructura de Datos</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+        <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+        <link rel="shortcut icon" href="logo.png">
+
+    
+    </head>
+    <body>
+        <nav class="sdb close">
+            <header>
+                <div class="texto-img">
+                    <span class="image"><a href="index.html"><img src="logo.png" alt=""></a></span>
+    
+                    <div class="texto logo">
+                        <span class="titulo">Estructura</span>
+                        <span class="subtitulo">De Datos</span>
+                    </div>
+                </div>
+                <i class='bx bx-chevron-right toggle'></i>
+            </header>
+    
+            <div class="barra-menu">
+                <div class="menu">
+                    <ul class="menu-links">
+                        <li class="nav-link">
+                            <a href="index.html"><i class='bx bx-home-alt icon' ></i><span class="texto nav-text">Inicio</span></a>
+                        </li>
+    
+                        <li class="nav-link">
+                            <a href="listas.html"><i class='bx bx-list-ol icon' ></i><span class="texto nav-text">Listas</span></a>
+                        </li>
+    
+                        <li class="nav-link">
+                            <a href="pilas.html"><i class='bx bx-data icon'></i><span class="texto nav-text">Pilas</span></a>
+                        </li>
+    
+                        <li class="nav-link">
+                            <a href="colas.html"><i class='bx bx-columns icon'></i><span class="texto nav-text">Colas</span></a>
+                        </li>
+
+                        <li class="nav-link">
+                            <a href="arboles.html"><i class='bx bx-trending-down icon' ></i><span class="texto nav-text">Arboles</span>
+                            </a>
+                        </li>
+
+                        <li class="nav-link">
+                            <a href="grafos.html"><i class='bx bxs-star icon' ></i><span class="texto nav-text">Grafos</span></a>
+                        </li>
+                        <li class="nav-link">
+                            <a href="tablah.html"><i class='bx bx-hash icon'></i><span class="texto nav-text">Tabla Hash</span>
+                            </a>
+                        </li>
+                        
+                    </ul>
+                </div>
+    
+                <div class="bottom-content">
+                    <li class="">
+                        <a href="creador.html"><i class='bx bxs-face icon' ></i><span class="texto nav-text">Creador</span></a>
+                    </li>
+
+                    <li class="mode">
+                        <div class="sun-moon">
+                            <i class='bx bx-moon icon moon'></i>
+                            <i class='bx bx-sun icon sun'></i>
+                        </div>
+                        <span class="mode-text texto">Dark mode</span>
+                        <div class="toggle-switch">
+                            <span class="switch" onclick="DarkMode()"></span>
+                        </div>
+                    </li>
+                    
+                </div>
+            </div>
+    
+        </nav>
+        <section class="home">
+            <div class="texto">Tablas Hash</div>
+            <p class="texto-home m">es una estructura de datos que asocia llaves o claves con valores. La operación principal que soporta de manera eficiente es la búsqueda: permite el acceso a los elementos (teléfono y dirección, por ejemplo) almacenados a partir de una clave generada (usando el nombre o número de cuenta, por ejemplo). Funciona transformando la clave con una función hash en un hash, un número que identifica la posición (casilla ocubeta) donde la tabla hash localiza el valor deseado.</p>
+            <img class="home-img tablah" src="tablah.png" alt="">
+            <p class="texto-home m">Las tablas hash se suelen implementar sobre vectores de una dimensión, aunque se pueden hacer implementaciones multi-dimensionales basadas en varias claves. Como en el caso de los arrays, las tablas hash proveen tiempo constante de búsqueda promedio, sin importar el número de elementos en la tabla.<br>Las tablas hash almacenan la información en posiciones pseudo-aleatorias, así que el acceso ordenado a su contenido es bastante lento. Otras estructuras como árboles binarios auto-balanceables tienen un tiempo promedio de búsqueda mayor (tiempo de búsqueda O(log n)), pero la información está ordenada en todo momento.
+
+            </p>
+            <div class="texto"><br>Para usar una tabla hash se necesita:
+            </div>
+           <ul class="body-listas">
+            <li>Una estructura de acceso directo (normalmente un array).</li>
+            <li>Una estructura de datos con una clave.</li>
+            <li>Una función resumen (hash) cuyo dominio sea el espacio de claves y su imagen (o rango) los números naturales.</li>
+           </ul>
+           <div class="texto">Inserción</div>
+           <p class="texto-home m">Para almacenar un elemento en la tabla hash se ha de convertir su clave a un número. Esto se consigue aplicando la función resumen (hash) a la clave del elemento. El resultado de la función resumen ha de mapearse al espacio de direcciones del vector que se emplea como soporte, lo cual se consigue con la función módulo. Tras este paso se obtiene un índice válido para la tabla.</p>
+           <div class="texto">Búsqueda</div>
+           <p class="texto-home m">Para recuperar los datos, es necesario únicamente conocer la clave del elemento, a la cual se le aplica la función resumen. El valor obtenido se mapea al espacio de direcciones de la tabla. Si el elemento existente en la posición indicada en el paso anterior tiene la misma clave que la empleada en la búsqueda, entonces es el deseado. Si la clave es distinta, se ha de buscar el elemento según la técnica empleada para resolver el problema de las colisiones al almacenar el elemento.</p>
+           <div>
+            <img class="home-img tablah1" src="tablah1.gif" alt="">
+           </div>
+           <div class="texto">Ejemplo pasado a codigo</div>
+            <img class="home-img codigotablah" src="codigotablah.png" alt="">
+            <img class="home-img codigotablah1" src="codigotablah1.png" alt="">
+
+        </section>
+        <script src="main.js" ></script>
+    </body>
+    </html>

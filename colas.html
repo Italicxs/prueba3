@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+        <meta name="viewport" content="widht=device-width, initial-scale=1.0">
+        <title>Estructura de Datos</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+        <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+        <link rel="shortcut icon" href="logo.png">
+
+    </head>
+    <body>
+        <nav class="sdb close">
+            <header>
+                <div class="texto-img">
+                    <span class="image"><a href="index.html"><img src="logo.png" alt=""></a></span>
+    
+                    <div class="texto logo">
+                        <span class="titulo">Estructura</span>
+                        <span class="subtitulo">De Datos</span>
+                    </div>
+                </div>
+                <i class='bx bx-chevron-right toggle'></i>
+            </header>
+    
+            <div class="barra-menu">
+                <div class="menu">
+                    <ul class="menu-links">
+                        <li class="nav-link">
+                            <a href="index.html"><i class='bx bx-home-alt icon' ></i><span class="texto nav-text">Inicio</span></a>
+                        </li>
+    
+                        <li class="nav-link">
+                            <a href="listas.html"><i class='bx bx-list-ol icon' ></i><span class="texto nav-text">Listas</span></a>
+                        </li>
+    
+                        <li class="nav-link">
+                            <a href="pilas.html"><i class='bx bx-data icon'></i><span class="texto nav-text">Pilas</span></a>
+                        </li>
+    
+                        <li class="nav-link">
+                            <a href="colas.html"><i class='bx bx-columns icon'></i><span class="texto nav-text">Colas</span></a>
+                        </li>
+
+                        <li class="nav-link">
+                            <a href="arboles.html"><i class='bx bx-trending-down icon' ></i><span class="texto nav-text">Arboles</span>
+                            </a>
+                        </li>
+
+                        <li class="nav-link">
+                            <a href="grafos.html"><i class='bx bxs-star icon' ></i><span class="texto nav-text">Grafos</span></a>
+                        </li>
+                        <li class="nav-link">
+                            <a href="tablah.html"><i class='bx bx-hash icon'></i><span class="texto nav-text">Tabla Hash</span>
+                            </a>
+                        </li>
+                        
+                    </ul>
+                </div>
+    
+                <div class="bottom-content">
+                    <li class="">
+                        <a href="creador.html"><i class='bx bxs-face icon' ></i><span class="texto nav-text">Creador</span></a>
+                    </li>
+
+                    <li class="mode">
+                        <div class="sun-moon">
+                            <i class='bx bx-moon icon moon'></i>
+                            <i class='bx bx-sun icon sun'></i>
+                        </div>
+                        <span class="mode-text texto">Dark mode</span>
+                        <div class="toggle-switch">
+                            <span class="switch" onclick="DarkMode()"></span>
+                        </div>
+                    </li>
+                    
+                </div>
+            </div>
+    
+        </nav>
+        <section class="home">
+            <div class="texto">Cola</div>
+            <p class="texto-home m">Una cola es una estructura de datos, caracterizada por ser una secuencia de elementos en la que la operación de inserción push se realiza por un extremo y la operación de extracción pop por el otro. </p>
+            
+            <p class="texto-home m">Las colas están formadas por nodos de la misma forma que las listas. Los nodos de las colas también están enlazados entre sí como las listas. Las colas no guardan ningún orden, como tampoco lo guardan las listas no ordenadas.<br>¿Qúe es entonces lo que diferencia a una lista de una cola?. Pues lo que diferencia estas dos estructuras de datos es la forma de añadir y de eliminar elementos de una cola.</p>
+            <div>
+                <img class="home-img cola" src="cola.png" alt="">
+            </div>
+            <div class="texto">Operaciones basicas con colas:</div>
+           <ul class="body-listas">
+            <li>Insertar: Método para insertar un dato en el final de la cola</li>
+            <li>Eliminar: Método para eliminar el dato ubicado en el frente de la cola</li>
+           </ul>
+           <div id="sds">
+            <img class="colas" src="insertar.png" alt="">
+            <img class="colas1" src="eliminiar.png" alt="">
+        </div>
+            <p class="texto-home m">En una cola simple, cuando se eliminan elementos se recorre el apuntador HEAD al siguiente elemento de la estructura, dejando espacios de memoria vacíos al inicio de la misma. Existen dos mejoras de la cola simple que utilizan de manera más eficiente la memoria: la cola circular y la cola doble.</p>
+            <ul class="body-listas">
+                <li><a href="colacircular.html">Cola circular</a></li>
+                <li><a href="coladoble.html">Cola Doble</a></li>
+            </ul>
+        </section>
+        <script src="main.js" ></script>
+
+    
+    </body>
+    </html>
+    

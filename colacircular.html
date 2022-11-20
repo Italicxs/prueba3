@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+        <meta name="viewport" content="widht=device-width, initial-scale=1.0">
+        <title>Estructura de Datos</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+        <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+        <link rel="shortcut icon" href="logo.png">
+    </head>
+    <body>
+        <nav class="sdb close">
+            <header>
+                <div class="texto-img">
+                    <span class="image"><a href="index.html"><img src="logo.png" alt=""></a></span>
+    
+                    <div class="texto logo">
+                        <span class="titulo">Estructura</span>
+                        <span class="subtitulo">De Datos</span>
+                    </div>
+                </div>
+                <i class='bx bx-chevron-right toggle'></i>
+            </header>
+    
+            <div class="barra-menu">
+                <div class="menu">
+                    <ul class="menu-links">
+                        <li class="nav-link">
+                            <a href="index.html"><i class='bx bx-home-alt icon' ></i><span class="texto nav-text">Inicio</span></a>
+                        </li>
+    
+                        <li class="nav-link">
+                            <a href="listas.html"><i class='bx bx-list-ol icon' ></i><span class="texto nav-text">Listas</span></a>
+                        </li>
+    
+                        <li class="nav-link">
+                            <a href="pilas.html"><i class='bx bx-data icon'></i><span class="texto nav-text">Pilas</span></a>
+                        </li>
+    
+                        <li class="nav-link">
+                            <a href="colas.html"><i class='bx bx-columns icon'></i><span class="texto nav-text">Colas</span></a>
+                        </li>
+
+                        <li class="nav-link">
+                            <a href="arboles.html"><i class='bx bx-trending-down icon' ></i><span class="texto nav-text">Arboles</span>
+                            </a>
+                        </li>
+
+                        <li class="nav-link">
+                            <a href="grafos.html"><i class='bx bxs-star icon' ></i><span class="texto nav-text">Grafos</span></a>
+                        </li>
+                        <li class="nav-link">
+                            <a href="tablah.html"><i class='bx bx-hash icon'></i><span class="texto nav-text">Tabla Hash</span>
+                            </a>
+                        </li>
+                        
+                    </ul>
+                </div>
+    
+                <div class="bottom-content">
+                    <li class="">
+                        <a href="creador.html"><i class='bx bxs-face icon' ></i><span class="texto nav-text">Creador</span></a>
+                    </li>
+
+                    <li class="mode">
+                        <div class="sun-moon">
+                            <i class='bx bx-moon icon moon'></i>
+                            <i class='bx bx-sun icon sun'></i>
+                        </div>
+                        <span class="mode-text texto">Dark mode</span>
+                        <div class="toggle-switch">
+                            <span class="switch" onclick="DarkMode()"></span>
+                        </div>
+                    </li>
+                    
+                </div>
+            </div>
+    
+        </nav>
+        <section class="home">
+            <div class="texto">Cola Circular</div>
+            <p class="texto-home m">La cola circular es una mejora de la cola simple, debido a que es una estructura de datos lineal en la cual el siguiente elemento del último es, en realidad, el primero. La cola circular utiliza de manera más eficiente la memoria que una cola simple.</p>
+            <div>
+                <img class="home-img circular1" src="colallena.png" alt="">
+            </div>
+         
+            <p class="texto-home m">Debido a que una cola circular es una mejora de la cola simple, maneja las mimas operaciones para INSERTAR (ENCOLAR) y ELIMINAR (DESENCOLAR).<br>Para diseñar un algoritmo que defina el comportamiento de la cola circular es necesario
+                considerar 3 casos para las operaciones de ENCOLAR y DESENCOLAR:</p>
+            <ul class="body-listas c">
+                <li>Estructura vacía (caso extremo).</li>
+                <p class="texto-home m">La cola circular posee dos referencias, una al inicio (HEAD) y otra al final (TAIL) de la cola. En una cola circular vacía ambas referencias (HEAD y TAIL) apuntan a nulo. En una cola circular vacía no es posible desencolar debido a que la estructura no posee
+                    elementos.</p>
+                <div id="sds"><img src="colavacia.png" alt=""></div>
+                <li>Estructura llena (caso extremo).</li>
+                <p class="texto-home m">Cuando la referencia a TAIL de una cola llega a su máxima capacidad de almacenamiento (MAX) se dice que la cola está llena. En una cola circular llena no es posible encolar más elementos.</p>
+                <div id="sds"><img src="colallena2.png" alt=""></div>
+                <li>Estructura con elementos (caso base).</li>
+                <p class="texto-home m">En una cola circular con elementos, cuando se intenta insertar un nuevo elemento hay que tener en cuenta el número de los elementos dentro de la estructura y no la referencia TAIL y MAX. Por lo tanto, se debe verificar si el número de elementos que tiene la estructura es menor al número máximo de elementos definidos, si es así, existe espacio para alojar el nuevo elemento y el nuevo nodo se puede insertar.</p>
+                <div id="sds"><img src="colaelemento.png" alt=""></div>
+            </ul>
+        </section>
+        <script src="main.js" ></script>
+
+    
+    </body>
+    </html>
+    

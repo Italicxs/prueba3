@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+        <meta name="viewport" content="widht=device-width, initial-scale=1.0">
+        <title>Estructura de Datos</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+        <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+        <link rel="shortcut icon" href="logo.png">
+    </head>
+    <!-- Cuerpo -->
+    <body>
+        <nav class="sdb close">
+            <header>
+                <div class="texto-img">
+                    <span class="image"><a href="index.html"><img src="logo.png" alt=""></a></span>
+    
+                    <div class="texto logo">
+                        <span class="titulo">Estructura</span>
+                        <span class="subtitulo">De Datos</span>
+                    </div>
+                </div>
+                <i class='bx bx-chevron-right toggle'></i>
+            </header>
+    <!-- Barra de navegacion -->
+            <div class="barra-menu">
+                <div class="menu">
+                    <ul class="menu-links">
+                        <li class="nav-link">
+                            <a href="index.html"><i class='bx bx-home-alt icon' ></i><span class="texto nav-text">Inicio</span></a>
+                        </li>
+    
+                        <li class="nav-link">
+                            <a href="listas.html"><i class='bx bx-list-ol icon' ></i><span class="texto nav-text">Listas</span></a>
+                        </li>
+    
+                        <li class="nav-link">
+                            <a href="pilas.html"><i class='bx bx-data icon'></i><span class="texto nav-text">Pilas</span></a>
+                        </li>
+    
+                        <li class="nav-link">
+                            <a href="colas.html"><i class='bx bx-columns icon'></i><span class="texto nav-text">Colas</span></a>
+                        </li>
+
+                        <li class="nav-link">
+                            <a href="arboles.html"><i class='bx bx-trending-down icon' ></i><span class="texto nav-text">Arboles</span>
+                            </a>
+                        </li>
+
+                        <li class="nav-link">
+                            <a href="grafos.html"><i class='bx bxs-star icon' ></i><span class="texto nav-text">Grafos</span></a>
+                        </li>
+                        <li class="nav-link">
+                            <a href="tablah.html"><i class='bx bx-hash icon'></i><span class="texto nav-text">Tabla Hash</span>
+                            </a>
+                        </li>
+                        
+                    </ul>
+                </div>
+    
+                <div class="bottom-content">
+                    <li class="">
+                        <a href="creador.html"><i class='bx bxs-face icon' ></i><span class="texto nav-text">Creador</span></a>
+                    </li>
+
+                    <li class="mode">
+                        <div class="sun-moon">
+                            <i class='bx bx-moon icon moon'></i>
+                            <i class='bx bx-sun icon sun'></i>
+                        </div>
+                        <span class="mode-text texto">Dark mode</span>
+                        <div class="toggle-switch">
+                            <span class="switch" onclick="DarkMode()"></span>
+                        </div>
+                    </li>
+                    
+                </div>
+            </div>
+    
+        </nav>
+        <!-- Texto  -->
+        <section class="home">
+            <div class="texto">Arboles</div>
+            <p class="texto-home m">Se define formalmente como una estructura finita formada por un nodo al cual están conectados ninguno, uno o más árboles disjuntos (no comparten elementos).</p>
+            <div>
+                <img class="home-img arboles" src="arboles.png" alt="">
+            </div>
+            <p class="texto-home m">Los Árboles son las estructuras de datos más utilizadas, pero también una de las más complejas, Los Árboles se caracterizan por almacenar sus nodos en forma jerárquica y no en forma lineal como las listas ligadas, colas, pilas, etc.</p>
+            <div class="texto">Estructura de los arboles:</div>
+           <ul class="body-listas">
+            <li>Nodos: Se le llama Nodo a cada elemento que contiene un Árbol.</li>
+            <li>Nodo Raíz: Se refiere al primer nodo de un Árbol, Solo un nodo del Árbol puede ser la Raíz.</li>
+            <li>Nodo Padre: Se utiliza este término para llamar a todos aquellos nodos que tiene al menos un hijo.</li>
+            <li>Nodo Hijo: Los hijos son todos aquellos nodos que tiene un padre.</li>
+            <li>Nodo Hermano: Los nodos hermanos son aquellos nodos que comparte a un mismo padre en común dentro de la estructura.</li>
+            <li>Nodo Hoja: Son todos aquellos nodos que no tienen hijos, los cuales siempre se encuentran en los extremos de la estructura.</li>
+            <li>Nodo Rama: Estos son todos aquellos nodos que no son la raíz y que además tiene al menos un hijo.</li>
+           </ul>
+           <div id="sds">
+            <img class="nodo" src="tiposdenodos.png" alt="">
+            <img class="nodos" src="nodospadrehijohermano.png" alt="">
+        </div>
+        <div class="texto">Niveles</div>
+            <p class="texto-home m">Nos referimos como nivel a cada generación dentro del árbol. Por ejemplo, cuando a un nodo hoja le agregamos un hijo, el nodo hoja pasa a ser un nodo rama, pero además el árbol crece una generación por lo que el Árbol tiene un nivel mas. Cada generación tiene un número de Nivel distinto que las demás generaciones.<br></p>
+            <div class="texto">Altura</div>
+            <p class="texto-home m">Le llamamos Altura al número máximo de niveles de un Árbol.<br>La altura es calculada mediante recursividad tomando el nivel mas grande de los dos sub-árboles de forma recursiva de la siguiente manera:</p>
+            <img class="home-img altura" src="altura.png" alt="">
+            <div class="texto">Altura = max(altura(hijo1), altura(hijo2), altura(hijoN)) + 1</div>
+            <div class="texto">Peso</div>
+            <p class="texto-home m">Le Conocemos como peso a el número de nodos que tiene un Árbol. Este factor es importante porque nos da una idea del tamaño del árbol y el tamaño en memoria que nos puede ocupar en tiempo de ejecución. El peso se puede calcular mediante cualquier tipo de recorrido el cual valla contando los nodos a medida que avanza sobre la estructura. El peso es un árbol es igual a la suma del peso de los sub-árboles hijos + 1</p>
+            <img class="home-img altura" src="peso.png" alt="">
+            <div class="texto">peso = peso(hijo1) + peso(hijo2) + peso(hijoN)+ 1</div>
+            <div class="texto">Orden</div>
+            <p class="texto-home m">El Orden de un árbol es el número máximo de hijos que puede tener un Nodo. Este valor no se calcula</p>
+            <img class="home-img orden" src="orden.png" alt="">
+            <div class="texto">Grado</div>
+            <p class="texto-home m">El grado se refiere al número mayor de hijos que tiene alguno de los nodos del Árbol y está limitado por el Orden, ya que este indica el número máximo de hijos que puede tener un nodo.<br>El grado se calcula contando de forma recursiva el número de hijos de cada sub-árbol hijo y el número de hijos del nodo actual para tomar el mayor, esta operación se hace de forma recursiva para recorrer todo el árbol.</p>
+            <img class="home-img altura" src="grado.png" alt="">
+            <div class="texto">grado = max(contarHijos(hijo1),contarHijos(hijo2), contarHijos(hijoN), contarHijos(this))</div>
+            <div class="texto">Sub-Arboles</div>
+            <p class="texto-home m">Conocemos como Sub-Árbol a todo Árbol generado a partir de una sección determinada del Árbol, Por lo que podemos decir que un Árbol es un nodo Raíz con N Sub-Árboles.  Existen escenarios donde podemos sacar un Sub-Árboles del Árbol para procesarlo de forma separada, de esta forma el Sub-Árboles pasa a ser un Árbol independiente, También podemos eliminar Sub-Árboles completos, Agregarlos, entre otras operaciones.</p>
+            <img class="home-img sub-arbol" src="subarbol.png" alt="">
+            <div class="texto">Arbol Binario</div>
+            <p class="texto-home m">A los arboles ordenados de grado dos se les conoce como arboles binarios ya que cada nodo del árbol no tendrá más de dos descendientes directos. Las aplicaciones de los arboles binarios son muy variadas ya que se les puede utilizar para representar una estructura en la cual es posible tomar decisiones con dos opciones en distintos puntos.</p>
+            <img class="home-img arbol-binario" src="arbolbinario.png" alt="">
+
+            <ul class="body-listas">
+                <li>Arbol Binario lleno: Es aquel que el que todos los nodos tienen cero o 2 hijos con excepción de la Raíz.</li>
+                <div id="sds"><img src="arbolbinariolleno.png" alt=""></div>
+                <li>Arbol Binario perfecto: Es un Árbol lleno en donde todos las Hojas están en el mismo Nivel.</li>
+                <div id="sds"><img src="arbolbinarioperfecto1.png" alt=""></div>
+            </ul>
+        </section>
+        <script src="main.js" ></script>
+
+    
+    </body>
+    </html>

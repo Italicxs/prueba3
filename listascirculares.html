@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+        <meta name="viewport" content="widht=device-width, initial-scale=1.0">
+        <title>Estructura de Datos</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+        <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+        <link rel="shortcut icon" href="logo.png">
+
+    </head>
+    <body>
+        <nav class="sdb close">
+            <header>
+                <div class="texto-img">
+                    <span class="image"><a href="index.html"><img src="logo.png" alt=""></a></span>
+    
+                    <div class="texto logo">
+                        <span class="titulo">Estructura</span>
+                        <span class="subtitulo">De Datos</span>
+                    </div>
+                </div>
+                <i class='bx bx-chevron-right toggle'></i>
+            </header>
+    
+            <div class="barra-menu">
+                <div class="menu">
+                    <ul class="menu-links">
+                        <li class="nav-link">
+                            <a href="index.html"><i class='bx bx-home-alt icon' ></i><span class="texto nav-text">Inicio</span></a>
+                        </li>
+    
+                        <li class="nav-link">
+                            <a href="listas.html"><i class='bx bx-list-ol icon' ></i><span class="texto nav-text">Listas</span></a>
+                        </li>
+    
+                        <li class="nav-link">
+                            <a href="pilas.html"><i class='bx bx-data icon'></i><span class="texto nav-text">Pilas</span></a>
+                        </li>
+    
+                        <li class="nav-link">
+                            <a href="colas.html"><i class='bx bx-columns icon'></i><span class="texto nav-text">Colas</span></a>
+                        </li>
+
+                        <li class="nav-link">
+                            <a href="arboles.html"><i class='bx bx-trending-down icon' ></i><span class="texto nav-text">Arboles</span>
+                            </a>
+                        </li>
+
+                        <li class="nav-link">
+                            <a href="grafos.html"><i class='bx bxs-star icon' ></i><span class="texto nav-text">Grafos</span></a>
+                        </li>
+                        <li class="nav-link">
+                            <a href="tablah.html"><i class='bx bx-hash icon'></i><span class="texto nav-text">Tabla Hash</span>
+                            </a>
+                        </li>
+                        
+                    </ul>
+                </div>
+    
+                <div class="bottom-content">
+                    <li class="">
+                        <a href="creador.html"><i class='bx bxs-face icon' ></i><span class="texto nav-text">Creador</span></a>
+                    </li>
+
+                    <li class="mode">
+                        <div class="sun-moon">
+                            <i class='bx bx-moon icon moon'></i>
+                            <i class='bx bx-sun icon sun'></i>
+                        </div>
+                        <span class="mode-text texto">Dark mode</span>
+                        <div class="toggle-switch">
+                            <span class="switch" onclick="DarkMode()"></span>
+                        </div>
+                    </li>
+                    
+                </div>
+            </div>
+    
+        </nav>
+
+        <section class="home">
+            <div class="texto">Listas Circulares</div>
+            <p class="texto-home m">Una lista circularmente enlazada tiene el mismo tipo de nodos que una lista simple enlazada. Esto es, cada nodo en una lista circularmente enlazada tiene un apuntador siguiente y una referencia a un elemento.</p>
+            <p class="texto-home m">Pero no hay una cabeza o cola en la lista circularmente enlazada. En vez de tener que el apuntador del ultimo nodo sea null, en una lista circularmente enlazada, este apunta de regreso al primer nodo. Por lo tanto, no hay primer nodo o ultimo.</p>
+            <div class="texto">Representación gráfica de una lista circular</div>
+            <div>
+                <img class="home-img circular" src="ListaCircular.png" alt="">
+            </div>
+            <p class="texto-home m">Aun cuando una lista circularmente enlazada no tiene inicio o terminación, no obstante se necesita que algún nodo esté marcado como especial, el cual ser.a llamado el cursor. El nodo cursor permite tener un lugar para iniciar si se requiere recorrer una lista circularmente inversa. Y si se recuerda esta posición inicial, entonces también se puede saber cuando se haya terminado con un recorrido en la lista circularmente enlazada, que es cuando se regresa al nodo que fue el nodo cursor cuando se inicio.</p>
+            <div class="texto">Estos son algunos métodos simples de actualización para una lista circular:</div>
+            <ul class="body-listas">
+                <li>Agregar: Inserta un nuevo nodo v inmediatamente después del cursor; si la lista está vacía, entonces v se convierte en el cursor y su apuntador sig apunta a el mismo.</li>
+                <li>Remover: Borra y regresa el nodo v inmediatamente después del cursor (no el propio cursor, a menos que este sea el único nodo); si la lista queda vacía, el cursor es puesto a null.</li>
+                <li>Avanzar: Avanza el cursor al siguiente nodo en la lista.</li>
+            </ul>
+        </section>
+        <script src="main.js" ></script>
+
+    </body>
+    </html>
+    

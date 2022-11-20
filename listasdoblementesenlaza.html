@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+        <meta name="viewport" content="widht=device-width, initial-scale=1.0">
+        <title>Estructura de Datos</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+        <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+        <link rel="shortcut icon" href="logo.png">
+
+    </head>
+    <body>
+        <nav class="sdb close">
+            <header>
+                <div class="texto-img">
+                    <span class="image"><a href="index.html"><img src="logo.png" alt=""></a></span>
+    
+                    <div class="texto logo">
+                        <span class="titulo">Estructura</span>
+                        <span class="subtitulo">De Datos</span>
+                    </div>
+                </div>
+                <i class='bx bx-chevron-right toggle'></i>
+            </header>
+    
+            <div class="barra-menu">
+                <div class="menu">
+                    <ul class="menu-links">
+                        <li class="nav-link">
+                            <a href="index.html"><i class='bx bx-home-alt icon' ></i><span class="texto nav-text">Inicio</span></a>
+                        </li>
+    
+                        <li class="nav-link">
+                            <a href="listas.html"><i class='bx bx-list-ol icon' ></i><span class="texto nav-text">Listas</span></a>
+                        </li>
+    
+                        <li class="nav-link">
+                            <a href="pilas.html"><i class='bx bx-data icon'></i><span class="texto nav-text">Pilas</span></a>
+                        </li>
+    
+                        <li class="nav-link">
+                            <a href="colas.html"><i class='bx bx-columns icon'></i><span class="texto nav-text">Colas</span></a>
+                        </li>
+
+                        <li class="nav-link">
+                            <a href="arboles.html"><i class='bx bx-trending-down icon' ></i><span class="texto nav-text">Arboles</span>
+                            </a>
+                        </li>
+
+                        <li class="nav-link">
+                            <a href="grafos.html"><i class='bx bxs-star icon' ></i><span class="texto nav-text">Grafos</span></a>
+                        </li>
+                        <li class="nav-link">
+                            <a href="tablah.html"><i class='bx bx-hash icon'></i><span class="texto nav-text">Tabla Hash</span>
+                            </a>
+                        </li>
+                        
+                    </ul>
+                </div>
+    
+                <div class="bottom-content">
+                    <li class="">
+                        <a href="creador.html"><i class='bx bxs-face icon' ></i><span class="texto nav-text">Creador</span></a>
+                    </li>
+
+                    <li class="mode">
+                        <div class="sun-moon">
+                            <i class='bx bx-moon icon moon'></i>
+                            <i class='bx bx-sun icon sun'></i>
+                        </div>
+                        <span class="mode-text texto">Dark mode</span>
+                        <div class="toggle-switch">
+                            <span class="switch" onclick="DarkMode()"></span>
+                        </div>
+                    </li>
+                    
+                </div>
+            </div>
+    
+        </nav>
+        <section class="home">
+            <div class="texto">Listas Doblementes Enlazadas</div>
+            <p class="texto-home m">Un tipo de lista enlazada que permite ir en ambas direcciones, hacia adelante y hacia atr.ás, en una lista enlazada. Esta es la lista doblemente enlazada. Tal lista permite una gran variedad de operaciones r.ápidas de actualizaci.ón, incluyendo la inserci.ón y el borrado en ambos extremos, y en el centro. Un nodo en una lista doblemente enlazada guarda dos referencias un enlace sig, el cual apunta al siguiente nodo en la lista, y un enlace prev, el cual apunta al nodo previo en la lista.</p>
+            <p class="texto-home m">A las listas simples enlazadas en un sentido, podemos recorrerlas solamente en una dirección (Listas simplemente encadenadas). Hay problemas donde se requiere recorrer la lista en ambas direcciones, en estos casos el empleo de listas doblemente enlazadas es recomendable.
+            </p>
+            <div class="texto">Representación gráfica de una lista doblemente enlazada</div>
+            <div>
+                <img class="home-img enlazadas" src="ListaDoblementeEnlazada.png" alt="">
+            </div>
+            <p class="texto-home m">El almacenamiento con nexos en sólo un sentido tiene el problema de no permitir recorrido hacia atrás, pero si se agrega un segundo apuntador se puede lograr este objetivo.<br>a ventaja que proporciona esta estructura es la operación de búsqueda e inserción, recorriendo hacia atrás en forma inmediata.<br>Pero tienen el problema de requerir más espacio de memoria.</p>
+        </section>
+        <script src="main.js" ></script>
+    </body>
+    </html>
+    

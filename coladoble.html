@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+        <meta name="viewport" content="widht=device-width, initial-scale=1.0">
+        <title>Estructura de Datos</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+        <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+        <link rel="shortcut icon" href="logo.png">
+    </head>
+    <body>
+        <nav class="sdb close">
+            <header>
+                <div class="texto-img">
+                    <span class="image"><a href="index.html"><img src="logo.png" alt=""></a></span>
+    
+                    <div class="texto logo">
+                        <span class="titulo">Estructura</span>
+                        <span class="subtitulo">De Datos</span>
+                    </div>
+                </div>
+                <i class='bx bx-chevron-right toggle'></i>
+            </header>
+    
+            <div class="barra-menu">
+                <div class="menu">
+                    <ul class="menu-links">
+                        <li class="nav-link">
+                            <a href="index.html"><i class='bx bx-home-alt icon' ></i><span class="texto nav-text">Inicio</span></a>
+                        </li>
+    
+                        <li class="nav-link">
+                            <a href="listas.html"><i class='bx bx-list-ol icon' ></i><span class="texto nav-text">Listas</span></a>
+                        </li>
+    
+                        <li class="nav-link">
+                            <a href="pilas.html"><i class='bx bx-data icon'></i><span class="texto nav-text">Pilas</span></a>
+                        </li>
+    
+                        <li class="nav-link">
+                            <a href="colas.html"><i class='bx bx-columns icon'></i><span class="texto nav-text">Colas</span></a>
+                        </li>
+
+                        <li class="nav-link">
+                            <a href="arboles.html"><i class='bx bx-trending-down icon' ></i><span class="texto nav-text">Arboles</span>
+                            </a>
+                        </li>
+
+                        <li class="nav-link">
+                            <a href="grafos.html"><i class='bx bxs-star icon' ></i><span class="texto nav-text">Grafos</span></a>
+                        </li>
+                        <li class="nav-link">
+                            <a href="tablah.html"><i class='bx bx-hash icon'></i><span class="texto nav-text">Tabla Hash</span>
+                            </a>
+                        </li>
+                        
+                    </ul>
+                </div>
+    
+                <div class="bottom-content">
+                    <li class="">
+                        <a href="creador.html"><i class='bx bxs-face icon' ></i><span class="texto nav-text">Creador</span></a>
+                    </li>
+
+                    <li class="mode">
+                        <div class="sun-moon">
+                            <i class='bx bx-moon icon moon'></i>
+                            <i class='bx bx-sun icon sun'></i>
+                        </div>
+                        <span class="mode-text texto">Dark mode</span>
+                        <div class="toggle-switch">
+                            <span class="switch" onclick="DarkMode()"></span>
+                        </div>
+                    </li>
+                    
+                </div>
+            </div>
+    
+        </nav>
+        <section class="home">
+            <div class="texto">Cola Doble</div>
+            <div>
+                <img class="home-img" src="bicola.png" alt="">
+            </div>
+            <p class="texto-home m">Una cola doble (o bicola) es una estructura de datos tipo cola simple en la cual las operaciones ENCOLAR y DESENCOLAR se pueden realizar por ambos extremos de laestructura, es decir, en una cola doble se pueden realizar las operaciones:</p>
+          
+            <ul class="body-listas">
+                <li>ENCOLAR POR HEAD</li>
+                <li>DESENCOLAR POR HEAD</li>
+                <li>ENCOLAR POR TAIL</li>
+                <li>DESENCOLAR POR TAIL</li>
+            </ul>
+            <div id="sds">
+                <img class="home-img" src="bicolas.png" alt="">
+            </div>
+            <p class="texto-home m">La cola doble es una mejora de una cola simple debido a que es posible realizar operaciones de inserción por ambos extremos de la estructura, permitiendo con estoutilizar el máximo espacio disponible de la estructura.<br>Para poder diseñar un programa que defina el comportamiento de una COLA DOBLE se deben considerar 3 casos para las 4 operaciones (INSERTAR y ELIMINAR tanto por T como por H):
+                </p>
+                <ul class="body-listas c">
+                    <li>Estructura vacía (caso extremo).</li>
+                    <p class="texto-home m">La cola doble posee dos referencias, una al inicio (HEAD) y otra al final (TAIL) de la cola. En una cola doble vacía ambas referencias (HEAD y TAIL) apuntan a nulo. En una cola doble vacía no es posible desencolar debido a que la estructura no posee
+                        elementos.</p>
+                    <div id="sds"><img src="bicolas1.png" alt=""></div>
+                    <div id="sds"><img src="bicolas2.png" alt=""></div>
+                    <li>Estructura llena (caso extremo).</li>
+                    <p class="texto-home m">Cuando el número de elementos de la estructura es igual a la capacidad máxima de almacenamiento (MAX) se dice que la cola está llena. En una cola doble llena no es posible encolar más elementos, ni por HEAD ni por TAIL.</p>
+                    <div id="sds"><img src="bicolas3.png" alt=""></div>
+                    <div id="sds"><img src="bicolas4.png" alt=""></div>
+                    <li>Estructura con elementos (caso base).</li>
+                    <p class="texto-home m">Una cola doble que contiene elementos (sin llegar a su máximo tamaño) representa el caso general de la estructura. En una cola doble con elementos es posible desencolar nodos, tanto por HEAD como por TAIL. Cuando se desencola por el inicio de la estructura, se debe recorrer la referencia al inicio de la cola (HEAD) al siguiente elemento de la estructura (sucesor).</p>
+                    <div id="sds"><img src="bicolas5.png" alt=""></div>
+                    <div id="sds"><img src="bicolas6.png" alt=""></div>
+        </section>
+        <script src="main.js" ></script>
+
+    </body>
+    </html>
+    
